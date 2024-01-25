@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1><a href="{% url 'blog:post_list' %}">Home</a></h1>
+      </nav>
+    </header>
+    <section id="content">{% block content %} {% endblock%}</section>
+    <section id="sidebar">
+      <h2>My Blog</h2>
+      <p>This is my blog</p>
+    </section>
+  </body>
+</html>
